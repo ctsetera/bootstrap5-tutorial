@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>breakpoint</title>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <h2>Containers</h2>
+    <p>
+      コンテナは、Bootstrap 基本的なレイアウト要素であり、特定のデバイスやビューポート内のコンテンツに適切な余白を与え整列させることができます。<br>
+      コンテナは、Bootstrap の基本的なレイアウト要素であり、<b>デフォルトのグリッドシステムを使用する際には必須です。</b><br>
+      Bootstrapには3つの異なるコンテナがあります。
+    </p>
+
+    <ul>
+      <li>.container は各レスポンシブブレークポイントで max-width を設定します。</li>
+      <li>.container-fluid の場合、すべてのブレークポイントで width: 100% となります。</li>
+      <li>.container-{breakpoint} は、指定されたブレークポイントまで width: 100% になります。</li>
+    </ul>
+
+    <table class="table w-75">
+      <thead>
+        <tr>
+          <td class="border-dark"></td>
+          <th scope="col">
+            Extra small<br>
+            <span class="font-weight-normal">&lt;576px</span>
+          </th>
+          <th scope="col">
+            Small<br>
+            <span class="font-weight-normal">≥576px</span>
+          </th>
+          <th scope="col">
+            Medium<br>
+            <span class="font-weight-normal">≥768px</span>
+          </th>
+          <th scope="col">
+            Large<br>
+            <span class="font-weight-normal">≥992px</span>
+          </th>
+          <th scope="col">
+            X-Large<br>
+            <span class="font-weight-normal">≥1200px</span>
+          </th>
+          <th scope="col">
+            XX-Large<br>
+            <span class="font-weight-normal">≥1400px</span>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row" class="font-weight-normal"><code>.container</code></th>
+          <td class="text-muted">100%</td>
+          <td>540px</td>
+          <td>720px</td>
+          <td>960px</td>
+          <td>1140px</td>
+          <td>1320px</td>
+        </tr>
+        <tr>
+          <th scope="row" class="font-weight-normal"><code>.container-sm</code></th>
+          <td class="text-muted">100%</td>
+          <td>540px</td>
+          <td>720px</td>
+          <td>960px</td>
+          <td>1140px</td>
+          <td>1320px</td>
+        </tr>
+        <tr>
+          <th scope="row" class="font-weight-normal"><code>.container-md</code></th>
+          <td class="text-muted">100%</td>
+          <td class="text-muted">100%</td>
+          <td>720px</td>
+          <td>960px</td>
+          <td>1140px</td>
+          <td>1320px</td>
+        </tr>
+        <tr>
+          <th scope="row" class="font-weight-normal"><code>.container-lg</code></th>
+          <td class="text-muted">100%</td>
+          <td class="text-muted">100%</td>
+          <td class="text-muted">100%</td>
+          <td>960px</td>
+          <td>1140px</td>
+          <td>1320px</td>
+        </tr>
+        <tr>
+          <th scope="row" class="font-weight-normal"><code>.container-xl</code></th>
+          <td class="text-muted">100%</td>
+          <td class="text-muted">100%</td>
+          <td class="text-muted">100%</td>
+          <td class="text-muted">100%</td>
+          <td>1140px</td>
+          <td>1320px</td>
+        </tr>
+        <tr>
+          <th scope="row" class="font-weight-normal"><code>.container-xxl</code></th>
+          <td class="text-muted">100%</td>
+          <td class="text-muted">100%</td>
+          <td class="text-muted">100%</td>
+          <td class="text-muted">100%</td>
+          <td class="text-muted">100%</td>
+          <td>1320px</td>
+        </tr>
+        <tr>
+          <th scope="row" class="font-weight-normal"><code>.container-fluid</code></th>
+          <td class="text-muted">100%</td>
+          <td class="text-muted">100%</td>
+          <td class="text-muted">100%</td>
+          <td class="text-muted">100%</td>
+          <td class="text-muted">100%</td>
+          <td class="text-muted">100%</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h4>Webブラウザの幅を変えて、各containerの幅が変化する様子を見てみよう！</h4>
+    <div class="container bg-primary text-white fw-bold">
+      container-sm (containerに省略可)
+    </div>
+    <div class="container-md bg-secondary text-white">
+      container-md
+    </div>
+    <div class="container-lg bg-success text-white">
+      container-lg
+    </div>
+    <div class="container-xl bg-danger text-white">
+      container-xl
+    </div>
+    <div class="container-xxl bg-warning text-white">
+      container-xxl
+    </div>
+    <div class="container-fluid bg-info text-white">
+      container-fluid
+    </div>
+
+    <br>
+
+    <h4>containerを使ってGrid systemを構築してみる</h4>
+    <p>container内のタグは全く同じだが、container次第で印象が大きく違うことが分かる</p>
+    <h6>container-md</h6>
+    <div class="container-md">
+      <div class="row">
+        <div class="col-3 bg-success text-white fw-bold">
+          ほげほげ１
+        </div>
+        <div class="col-4 bg-primary text-white fw-bold">
+          ふがふが１
+        </div>
+        <div class="col-5 bg-danger text-white fw-bold">
+          ぴよぴよ１
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6 bg-secondary text-white fw-bold">
+          ほげほげ２
+        </div>
+        <div class="col-4 bg-info text-white fw-bold">
+          ふがふが２
+        </div>
+        <div class="col-2 bg-warning text-white fw-bold">
+          ぴよぴよ２
+        </div>
+      </div>
+    </div>
+    <h6>container-xl</h6>
+    <div class="container-xl bg-info text-white">
+      <div class="row">
+        <div class="col-3 bg-success text-white fw-bold">
+          ほげほげ１
+        </div>
+        <div class="col-4 bg-primary text-white fw-bold">
+          ふがふが１
+        </div>
+        <div class="col-5 bg-danger text-white fw-bold">
+          ぴよぴよ１
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6 bg-secondary text-white fw-bold">
+          ほげほげ２
+        </div>
+        <div class="col-4 bg-info text-white fw-bold">
+          ふがふが２
+        </div>
+        <div class="col-2 bg-warning text-white fw-bold">
+          ぴよぴよ２
+        </div>
+      </div>
+    </div>
+    <h6>container-fluid</h6>
+    <div class="container-fluid bg-info text-white">
+      <div class="row">
+        <div class="col-3 bg-success text-white fw-bold">
+          ほげほげ１
+        </div>
+        <div class="col-4 bg-primary text-white fw-bold">
+          ふがふが１
+        </div>
+        <div class="col-5 bg-danger text-white fw-bold">
+          ぴよぴよ１
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6 bg-secondary text-white fw-bold">
+          ほげほげ２
+        </div>
+        <div class="col-4 bg-info text-white fw-bold">
+          ふがふが２
+        </div>
+        <div class="col-2 bg-warning text-white fw-bold">
+          ぴよぴよ２
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <a href="https://getbootstrap.jp/docs/5.0/layout/containers/">参照</a><br><br>
+
+    <a href="../index.html">Topへ戻る</a>
+
+  <script src="../../js/app.js"></script>
+  <link rel="stylesheet" href="../../css/app.css" />
+</html>

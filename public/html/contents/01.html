@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>Breakpoints</title>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <h2>Breakpoints</h2>
+    <p>ブレイクポイントは、デバイスやビューポートのサイズによってレイアウトがどのようにレスポンシブに変化するかを示すトリガーです。<br>
+      ここではGrid systemを用いて、ブレイクポイントがどのように働くのか例を示します。
+    </p>
+
+    <h3>一覧</h3>
+      <table class="table w-50">
+        <thead >
+          <tr>
+            <th>名称</th>
+            <th>書き方</th>
+            <th>範囲</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>X-Small</td>
+            <td>xs または <i>None</i><br>(colとかcontainerとかで書き方が異なる)</td>
+            <td>&lt;576px</td>
+          </tr>
+          <tr>
+            <td>Small</td>
+            <td>sm</td>
+            <td>≥576px</td>
+          </tr>
+          <tr>
+            <td>Medium</td>
+            <td>md</td>
+            <td>≥768px</td>
+          </tr>
+          <tr>
+            <td>Large</td>
+            <td>lg</td>
+            <td>≥992px</td>
+          </tr>
+          <tr>
+            <td>Extra large</td>
+            <td>xl</td>
+            <td>≥1200px</td>
+          </tr>
+          <tr>
+            <td>Extra extra large</td>
+            <td>xxl</td>
+            <td>≥1400px</td>
+          </tr>
+        </tbody>
+      </table>
+    <hr />
+
+    <h4>Webブラウザ幅不問で幅が10になるサンプル</h4>
+    <div class="col-10 bg-success fw-bold text-white">
+      col-10
+    </div>
+    <br>
+
+    <h4>Webブラウザ幅が992px以上で幅が5になるサンプル</h4>
+    <div class="col-lg-5 bg-primary fw-bold text-white">
+      col-lg-5
+    </div>
+    <br>
+
+    <h4>Webブラウザ幅が768px以上で幅が7、1440px以上で幅が10になるサンプル</h4>
+    <div class="col-md-7 col-xxl-10 bg-danger fw-bold text-white">
+      col-md-7 col-xxl-10
+    </div>
+    <br>
+
+    <h4>Webブラウザ幅が576px以上で1列に並び、5:4:3に分割されるサンプル</h4>
+    <div class=".container-fluid">
+      <div class="row">
+        <div class="col-sm-5 bg-success fw-bold text-white">
+          col-sm-5 
+        </div>
+        <div class="col-sm-4 bg-primary fw-bold text-white">
+          col-sm-4
+        </div>
+        <div class="col-sm-3 bg-danger fw-bold text-white">
+          col-sm-3
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <a href="https://getbootstrap.jp/docs/5.0/layout/breakpoints/">参照</a><br><br>
+
+    <a href="../index.html">Topへ戻る</a>
+
+  <script src="../../js/app.js"></script>
+  <link rel="stylesheet" href="../../css/app.css" />
+</html>

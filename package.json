@@ -1,0 +1,42 @@
+{
+  "name": "bootstrap5-tutorial",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "dev": "npm run development",
+    "development": "mix",
+    "watch": "mix watch",
+    "watch-poll": "mix watch -- --watch-options-poll=1000",
+    "hot": "mix watch --hot",
+    "prod": "npm run production",
+    "production": "mix --production",
+    "typesync": "typesync || :"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@popperjs/core": "^2.10.1",
+    "@types/bootstrap": "^5.1.6",
+    "@types/browser-sync": "^3001.0.28-alpha",
+    "@types/browser-sync-webpack-plugin": "^2.2.2",
+    "@types/lodash": "^4.14.173",
+    "@types/sass": "^1.16.1",
+    "axios": "^0.21",
+    "bootstrap": "^5.1.1",
+    "browser-sync": "^2.27.5",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "laravel-mix": "^6.0.31",
+    "lodash": "^4.17.19",
+    "mix": "0.0.1",
+    "popper.js": "^1.16.1",
+    "postcss": "^8.1.14",
+    "resolve-url-loader": "^4.0.0",
+    "sass": "^1.41.1",
+    "sass-loader": "^12.1.0",
+    "ts-loader": "^9.2.5",
+    "typescript": "^4.4.3",
+    "typesync": "^0.8.0"
+  }
+}
