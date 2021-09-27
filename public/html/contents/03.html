@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>Grid system</title>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <h2>Grid system</h2>
+    <p>
+        グリッドシステムは、一連のコンテナ、行、列を使用してコンテンツをレイアウトし、整列させます。<br>
+        flexbox で構築されており、完全にレスポンシブです。<br>
+    </p>
+
+    <h3>Auto-layout columns</h3>
+    <p>
+        .col-sm-6 のような明示的な番号付きクラスを使用せずに、ブレークポイント固有のカラムクラスを利用して簡単にカラムのサイズを決定します。<br>
+    </p>
+    <div class="container">
+        <div class="row">
+          <div class="col bg-primary">
+            1 of 2
+          </div>
+          <div class="col bg-secondary">
+            2 of 2
+          </div>
+        </div>
+        <div class="row">
+          <div class="col bg-primary">
+            1 of 3
+          </div>
+          <div class="col bg-secondary">
+            2 of 3
+          </div>
+          <div class="col bg-info">
+            3 of 3
+          </div>
+        </div>
+    </div>
+    <br>
+
+    <h3>Setting one column width</h3>
+    <p>真ん中のカラムに明示的な番号付きクラスを指定してみる。</p>
+
+    <div class="container">
+        <div class="row">
+          <div class="col bg-primary">
+            1 of 3
+          </div>
+          <div class="col-6 bg-secondary">
+            2 of 3 (col-6)
+          </div>
+          <div class="col bg-info">
+            3 of 3
+          </div>
+        </div>
+        <div class="row">
+          <div class="col bg-primary">
+            1 of 3
+          </div>
+          <div class="col-5 bg-secondary">
+            2 of 3 (col-5)
+          </div>
+          <div class="col bg-info" >
+            3 of 3
+          </div>
+        </div>
+    </div>
+    <br>
+
+    <h3>Variable width content</h3>
+    <p>col-{breakpoint}-auto クラスを使って、内容の自然な幅に基づいてカラムのサイズを調整します。</p>
+    <div class="container">
+        <div class="row justify-content-md-center">
+          <div class="col col-lg-2 bg-primary">
+            1 of 3
+          </div>
+          <div class="col-md-auto bg-secondary">
+            Variable width content
+          </div>
+          <div class="col col-lg-2 bg-info" >
+            3 of 3
+          </div>
+        </div>
+        <div class="row">
+          <div class="col bg-primary">
+            1 of 3
+          </div>
+          <div class="col-md-auto bg-secondary">
+            Variable width content
+          </div>
+          <div class="col col-lg-2 bg-info">
+            3 of 3
+          </div>
+        </div>
+    </div>
+    <br>
+
+    <h3>Stacked to horizontal</h3>
+    <p>.col-sm- *クラスの単一のセットを使用して、積み重ねられて始まり、小さなブレークポイント（sm）で水平になる基本的なグリッドシステムを作成できます。</p>
+
+    <div class="container">
+        <div class="row">
+          <div class="col-sm-8 bg-primary">col-sm-8</div>
+          <div class="col-sm-4  bg-secondary">col-sm-4</div>
+        </div>
+        <div class="row">
+          <div class="col-sm bg-primary">col-sm</div>
+          <div class="col-sm bg-secondary">col-sm</div>
+          <div class="col-sm bg-info">col-sm</div>
+        </div>
+    </div>
+    <br>
+
+    <h3>Row columns</h3>
+    <p> .row-cols- *を使うことで、1行あたりの列の数をすばやく設定します。<br>
+    上から順に row-clo-2, row-clo-3, row-col-auto</p>
+    <div class="container">
+        <div class="row row-cols-2">
+          <div class="col bg-success">Column</div>
+          <div class="col bg-warning">Column</div>
+          <div class="col  bg-danger">Column</div>
+          <div class="col bg-info">Column</div>
+        </div>
+    </div>
+    <br>
+
+    <div class="container">
+        <div class="row row-cols-3">
+            <div class="col bg-success">Column</div>
+            <div class="col bg-warning">Column</div>
+            <div class="col  bg-danger">Column</div>
+            <div class="col bg-info">Column</div>
+        </div>
+    </div>
+    <br>
+
+    <div class="container">
+        <div class="row row-cols-auto">
+            <div class="col bg-success">Column</div>
+            <div class="col bg-warning">Column</div>
+            <div class="col  bg-danger">Column</div>
+            <div class="col bg-info">Column</div>
+        </div>
+    </div>
+    <br>
+
+    <a href="https://getbootstrap.jp/docs/5.0/layout/grid/">参照</a><br><br>
+
+    <a href="../index.html">Topへ戻る</a>
+
+  <script src="../../js/app.js"></script>
+  <link rel="stylesheet" href="../../css/app.css" />
+</html>
